@@ -1,0 +1,23 @@
+.logo{
+    text-align: center;
+    img{
+        height:80px;
+    }
+}
+nav{
+    background:rgb(49, 54, 63);
+    ul{
+        display: flex;
+
+        li.nav-items{
+            list-style: none;
+            color:white;
+            padding:10px 20px;
+            font-weight: 500;
+            transition: 0.2s;
+            &:hover{
+                background:#FF9800;
+            }
+        }
+    }
+}

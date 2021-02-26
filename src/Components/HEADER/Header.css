@@ -1,0 +1,31 @@
+.logo {
+  text-align: center;
+}
+
+.logo img {
+  height: 80px;
+}
+
+nav {
+  background: #31363f;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li.nav-items {
+  list-style: none;
+  color: white;
+  padding: 10px 20px;
+  font-weight: 500;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+nav ul li.nav-items:hover {
+  background: #FF9800;
+}
+/*# sourceMappingURL=Header.css.map */

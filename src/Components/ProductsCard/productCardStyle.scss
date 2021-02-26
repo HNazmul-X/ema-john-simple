@@ -1,0 +1,88 @@
+
+.card-cover{
+    display: flex;
+    border:1px solid grey;
+    margin:10px auto;
+    color:#8c8d8e;
+    .image{
+        flex-basis: 35%;
+        margin-right:1.5%;
+
+        img{
+            width:100%;
+            height:230px;
+            object-fit: cover;
+            padding-right: 20px;
+        }
+    }
+    .desc{
+        flex-basis: 75%;
+        .title{
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        .pricing_feature{
+            padding:10px 0;
+            display: flex;
+            .pricing{
+                width:50%;
+                .price{
+                    margin-top:20px
+                }
+                .stock{
+                    margin-bottom: 10px ;
+                }
+                button.add-to-card{
+                    width: 80%;
+                    background:#FF9800;
+                    border:none;
+                    display: inherit;
+                    margin: auto;
+                    padding:10px;
+                    font-size:18px;
+                    color:white;
+                    margin-top: 20px;
+                    &:focus{
+                        outline: none;
+                    }
+                }
+            }
+            .feature{
+                width: 50%;
+                .review{
+                    i{
+                        color:goldenrod;
+                    }
+                }
+                .feature-list{
+                    li{
+                        list-style: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:712px){
+    
+    .card-cover{
+        flex-direction: column;
+        margin-bottom: 2rem;;
+        .image{
+            text-align: center;
+            img{
+                height: auto;
+                width:100%;
+                
+            }
+        }
+    }
+    .desc{
+        .title{
+            font-size: 20px;
+        }
+    }
+}

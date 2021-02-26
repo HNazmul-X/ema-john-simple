@@ -1,0 +1,100 @@
+.card-cover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid grey;
+  margin: 10px auto;
+  color: #8c8d8e;
+}
+
+.card-cover .image {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+  margin-right: 1.5%;
+}
+
+.card-cover .image img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding-right: 20px;
+}
+
+.card-cover .desc {
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+
+.card-cover .desc .title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.card-cover .desc .pricing_feature {
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-cover .desc .pricing_feature .pricing {
+  width: 50%;
+}
+
+.card-cover .desc .pricing_feature .pricing .price {
+  margin-top: 20px;
+}
+
+.card-cover .desc .pricing_feature .pricing .stock {
+  margin-bottom: 10px;
+}
+
+.card-cover .desc .pricing_feature .pricing button.add-to-card {
+  width: 80%;
+  background: #FF9800;
+  border: none;
+  display: inherit;
+  margin: auto;
+  padding: 10px;
+  font-size: 18px;
+  color: white;
+  margin-top: 20px;
+}
+
+.card-cover .desc .pricing_feature .pricing button.add-to-card:focus {
+  outline: none;
+}
+
+.card-cover .desc .pricing_feature .feature {
+  width: 50%;
+}
+
+.card-cover .desc .pricing_feature .feature .review i {
+  color: goldenrod;
+}
+
+.card-cover .desc .pricing_feature .feature .feature-list li {
+  list-style: none;
+}
+
+@media screen and (max-width: 712px) {
+  .card-cover {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .card-cover .image {
+    text-align: center;
+  }
+  .card-cover .image img {
+    height: auto;
+    width: 100%;
+  }
+  .desc .title {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=productCardStyle.css.map */

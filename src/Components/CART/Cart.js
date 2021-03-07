@@ -1,11 +1,22 @@
 import React from 'react';
 import "./Cart.css"
 
+
+const buttonStyle = {
+    background:"orange",
+    color:"white",
+    padding:"10px 20px",
+    border:"none",
+    textDecoration:"none",
+    display:"inline-block"
+}
+export {buttonStyle};
+
 const Cart = (props) => {
     const cart = props.cartItem;
     
     const formatAndFixed2Num = (num) => Number((num).toFixed(2))
-   const totalItemPrice = formatAndFixed2Num(cart.reduce((accumulator, currentValue) => accumulator + currentValue.price, 0));
+   const totalItemPrice = formatAndFixed2Num(cart.reduce((accumulator, currentValue) => accumulator + currentValue.price * (currentValue.quantity || 1) , 0));
 
    let shippingFee = 0;
    if(totalItemPrice < 80 && totalItemPrice > 0){
@@ -17,14 +28,24 @@ const Cart = (props) => {
 
     return (
         <div className={"cart"}>
-            <h3 className="title" >Order Summary</h3>
-            <h3 className="title" >Ordered Items : {props.cartItem.length} </h3>
-            <p><small>Itmes :{totalItemPrice}</small></p>
-            <p><small>Shopping & Handling {shippingFee}</small></p>
-            <p><small>Total Befor Tax : {totalItemPrice + shippingFee} </small></p>
-            <p><small>Estimated Tax : {tax} </small></p>
+            <h3 className="title">Order Summary</h3>
+            <h3 className="title">Ordered Items : {props.cartItem.length} </h3>
+            <p>
+                <small>Itmes :{totalItemPrice}</small>
+            </p>
+            <p>
+                <small>Shopping & Handling {shippingFee}</small>
+            </p>
+            <p>
+                <small>Total Befor Tax : {totalItemPrice + shippingFee} </small>
+            </p>
+            <p>
+                <small>Estimated Tax : {tax} </small>
+            </p>
             <h4>Order Total : {tax + totalItemPrice + shippingFee} </h4>
-            <button>Review your Order</button>
+            <button>
+                {props.children}
+            </button>
         </div>
     );
 };

@@ -1,6 +1,7 @@
 import {  faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./productCardStyle.css"
 
 const ProductCards = (props) => {
@@ -13,7 +14,9 @@ const ProductCards = (props) => {
                         <img src={img} alt="" />
                     </div>
                     <div className="desc">
-                        <h2 className="title">{name}</h2>
+                        <h2 className="title">
+                            <Link to={`/product/${key}`}>{name}</Link>
+                        </h2>
                         <p className="author">by:{seller} </p>
                         <div className="pricing_feature">
                             <div className="pricing">

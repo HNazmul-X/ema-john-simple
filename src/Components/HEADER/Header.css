@@ -18,14 +18,19 @@ nav ul {
 
 nav ul li.nav-items {
   list-style: none;
+}
+
+nav ul li.nav-items a {
   color: white;
   padding: 10px 20px;
   font-weight: 500;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: inline-block;
+  text-decoration: none;
 }
 
-nav ul li.nav-items:hover {
-  background: #FF9800;
+nav ul li.nav-items a:hover {
+  background: #ff9800;
 }
 /*# sourceMappingURL=Header.css.map */
